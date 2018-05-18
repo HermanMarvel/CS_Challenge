@@ -1,0 +1,3 @@
+// api tests via chai and chai json schema
+// circle ci file for test and reports stuff
+// executable file to run on the localhost
