@@ -33,18 +33,14 @@ describe("API Schema Validation", function()  {
         .end((err, res) => {
             console.log("Verifiing endpoint: " + endpointA);
 
-            let totalResources = 0;
+            const domainList = JSON.parse(res.text);
 
-            for (const domainJson of JSON.parse(res.text)) {
-
+            for (const domainJson of domainList) {
                 expect(domainJson).to.be.jsonSchema(getSchema());
-
-                totalResources++;
             }
             console.log("Total number of resources at endpoint"
-                    + endpointA + " is: " + totalResources);
+                    + endpointA + " is: " + domainList.lenth());
             done();
-
         });
     });
 
@@ -57,16 +53,13 @@ describe("API Schema Validation", function()  {
         .end((err, res) => {
             console.log("Verifiing endpoint: " + endpointB);
 
-            let totalResources = 0;
+            const domainList = JSON.parse(res.text);
 
-            for (const domainJson of JSON.parse(res.text)) {
-
+            for (const domainJson of domainList) {
                 expect(domainJson).to.be.jsonSchema(getSchema());
-
-                totalResources++;
             }
             console.log("Total number of resources at endpoint"
-                    + endpointB + " is: " + totalResources);
+                    + endpointB + " is: " + domainList.length());
             done();
         });
     });
