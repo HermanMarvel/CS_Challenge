@@ -6,7 +6,7 @@ Solution is based on node.js with support of mocha, chai and superagent.
 # RUN ON LOCAL HOST 
 
 To run on localhost:
-1. npm/yarn install
+1. npm/yarn install 
 2. npm/yarn run test
 
 Alterntatively run RUN_TESTS.sh that is based in the root directory. That will run a similar to Circle CI workflow except docker 
